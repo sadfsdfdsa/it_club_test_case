@@ -9,7 +9,7 @@
           :label-text="'Select contact'"
           :inner-text="pickedContactLabel"
           :success="!!pickedContact"
-          @click="
+          :click="
             $router.push({
               name: 'ItemsPickerView',
               params: { type: 'contact' },
@@ -20,7 +20,7 @@
           :label-text="'Select payment method'"
           :inner-text="'Default method: TIME'"
           :disabled="true"
-          @click="
+          :click="
             $router.push({
               name: 'ItemsPickerView',
               params: { type: 'method' },

@@ -7,7 +7,8 @@
       <Btn
         :text="$props.innerText"
         :disabled="$props.disabled"
-        :class="{'bg-green-100': $props.success}"
+        :class="{ 'bg-green-100': $props.success }"
+        @click="$props.click"
       />
     </div>
   </div>
@@ -36,6 +37,10 @@ export default defineComponent({
     success: {
       default: false,
       type: Boolean
+    },
+    click: {
+      type: Function,
+      required: true
     }
   }
 })
