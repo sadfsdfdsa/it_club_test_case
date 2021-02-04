@@ -10,7 +10,7 @@
           :inner-text="pickedContactLabel"
           :success="!!pickedContact"
           :click="
-            $router.push({
+            () => $router.push({
               name: 'ItemsPickerView',
               params: { type: 'contact' },
             })
@@ -21,7 +21,7 @@
           :inner-text="'Default method: TIME'"
           :disabled="true"
           :click="
-            $router.push({
+            () => $router.push({
               name: 'ItemsPickerView',
               params: { type: 'method' },
             })
